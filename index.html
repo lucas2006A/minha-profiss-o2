@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agricultura: O Coração do Brasil</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f2;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* Seções */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2d5a27;
+            border-bottom: 2px solid #8eb057;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Grid de Serviços/Cultivos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9fbf8;
+            padding: 20px;
+            border-left: 5px solid #2d5a27;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2d5a27;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>Orgulho de ser Agricultor</h1>
+        <p>Cultivando o futuro com dedicação, tecnologia e respeito à terra.</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="section">
+            <h2>Sobre a Profissão</h2>
+            <p>Ser agricultor é mais do que um trabalho; é uma missão. É entender os ciclos da natureza, lidar com o solo e garantir que o alimento chegue à mesa de milhões de pessoas. Do plantio à colheita, cada etapa exige paciência e conhecimento técnico.</p>
+        </section>
+
+        <section class="section">
+            <h2>Minhas Especialidades</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Plantio Sustentável</h3>
+                    <p>Uso de técnicas que preservam os nutrientes do solo e garantem colheitas saudáveis a longo prazo.</p>
+                </div>
+                <div class="card">
+                    <h3>Gestão de Cultivos</h3>
+                    <p>Monitoramento constante contra pragas e otimização do uso de recursos hídricos.</p>
+                </div>
+                <div class="card">
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Aplicação de maquinário moderno e monitoramento digital para aumentar a produtividade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contato</h2>
+            <p>Interessado em saber mais sobre os produtos ou trocar experiências sobre o agronegócio? Entre em contato!</p>
+            <p style="margin-top: 15px;"><strong>Email:</strong> contato@meusitio.com.br</p>
+            <p><strong>Localização:</strong> Interior de São Paulo / Brasil</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Profissão Agricultor | Feito com dedicação.</p>
+    </footer>
+
 </body>
 </html>
