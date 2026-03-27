@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,19 +6,14 @@
     <title>🌾 Agricultura: O Coração do Brasil | Orgulho do Campo</title>
     <meta name="description" content="Portal dedicado à profissão de agricultor, destacando práticas sustentáveis, tecnologia no campo e a importância do agro para o Brasil.">
     <meta name="author" content="Agricultor Brasil">
-    <!-- Pré-conexão para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fonte Google: Inter + Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navegação fixa -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -27,26 +21,25 @@
                 <span>AgroBrasil</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="#sobre"><i class="fas fa-seedling"></i> Sobre</a></li>
-                <li><a href="#especialidades"><i class="fas fa-chart-line"></i> Especialidades</a></li>
-                <li><a href="#galeria"><i class="fas fa-camera"></i> Galeria</a></li>
-                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                <li><a href="index.html#home"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="sobre.html" target="_blank"><i class="fas fa-seedling"></i> Sobre</a></li>
+                <li><a href="index.html#especialidades"><i class="fas fa-chart-line"></i> Especialidades</a></li>
+                <li><a href="index.html#galeria"><i class="fas fa-camera"></i> Galeria</a></li>
+                <li><a href="index.html#contato"><i class="fas fa-envelope"></i> Contato</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero principal -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>🌱 Orgulho de ser Agricultor</h1>
             <p>Cultivando o futuro com dedicação, tecnologia e respeito à terra. O agro é a força que move o Brasil.</p>
-            <a href="#sobre" class="btn-hero"><i class="fas fa-hand-peace"></i> Conheça nossa história</a>
+            <!-- BOTÃO MODIFICADO: abre sobre.html em nova aba -->
+            <a href="sobre.html" target="_blank" class="btn-hero"><i class="fas fa-hand-peace"></i> Conheça nossa história</a>
         </div>
     </section>
 
     <div class="container">
-        <!-- Seção SOBRE A PROFISSÃO -->
         <section id="sobre" class="section">
             <h2><i class="fas fa-leaf"></i> Sobre a Profissão</h2>
             <p style="font-size: 1.1rem; margin-bottom: 16px;">Ser agricultor é mais do que um trabalho; é uma missão. É entender os ciclos da natureza, lidar com o solo e garantir que o alimento chegue à mesa de milhões de pessoas. Do plantio à colheita, cada etapa exige paciência, conhecimento técnico e paixão pelo campo.</p>
@@ -57,7 +50,6 @@
             </div>
         </section>
 
-        <!-- Números do Agro -->
         <div class="section">
             <h2><i class="fas fa-chart-simple"></i> O Agro em Números</h2>
             <div class="stats-grid">
@@ -67,7 +59,6 @@
             </div>
         </div>
 
-        <!-- Especialidades -->
         <section id="especialidades" class="section">
             <h2><i class="fas fa-star-of-life"></i> Minhas Especialidades</h2>
             <div class="grid-cards">
@@ -94,7 +85,6 @@
             </div>
         </section>
 
-        <!-- Galeria de imagens do campo -->
         <section id="galeria" class="section">
             <h2><i class="fas fa-image"></i> Belezas da Colheita</h2>
             <p class="sub">Cada fruto carrega o suor e a esperança de quem cultiva a terra com amor.</p>
@@ -114,7 +104,6 @@
             </div>
         </section>
 
-        <!-- Depoimentos inspiradores -->
         <div class="section">
             <h2><i class="fas fa-comment-dots"></i> Vozes do Campo</h2>
             <div class="testimonial-card">
@@ -127,7 +116,6 @@
             </div>
         </div>
 
-        <!-- Contato -->
         <section id="contato" class="section">
             <h2><i class="fas fa-address-card"></i> Fale com a Gente</h2>
             <div class="contact-wrapper">
@@ -157,20 +145,17 @@
         </section>
     </div>
 
-    <!-- Rodapé final -->
     <footer>
         <p><i class="fas fa-tractor"></i> © 2026 - Profissão Agricultor | Cultivando sonhos, alimentando o Brasil 🌽</p>
         <p style="margin-top: 12px; font-size: 0.8rem;">Orgulho de quem planta, colhe e transforma o futuro com as próprias mãos.</p>
     </footer>
 
-    <!-- Botão flutuante WhatsApp -->
     <a href="https://wa.me/5514988887766?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20agricultura%20sustentável." class="btn-whatsapp" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
         <span>Fale conosco</span>
     </a>
 
     <script>
-        // Intercepta o envio do formulário
         const form = document.getElementById('formContato');
         if(form) {
             form.addEventListener('submit', function(e) {
@@ -180,11 +165,11 @@
             });
         }
 
-        // Scroll suave para os links de navegação
         document.querySelectorAll('.nav-links a, .btn-hero').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
-                if(href && href.startsWith('#')) {
+                if(href && href.startsWith('#') && !href.startsWith('#')) {
+                    // só para âncoras internas
                     e.preventDefault();
                     const targetId = href.substring(1);
                     const targetElement = document.getElementById(targetId);

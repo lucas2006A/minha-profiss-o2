@@ -1,399 +1,110 @@
-/* Reset e base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Nossa História | Agricultura Brasileira</title>
+    <meta name="description" content="Conheça a história da agricultura no Brasil, sua evolução e importância para o país.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* pequenos ajustes para a página sobre */
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .history-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .history-content img {
+            width: 100%;
+            border-radius: 24px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: var(--verde-destaque);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #164b12;
+        }
+        .highlight {
+            background: #eef5e8;
+            padding: 1.5rem;
+            border-radius: 28px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
 
-body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
-    color: #1e2a1b;
-    background-color: #f9fbf5;
-    scroll-behavior: smooth;
-}
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tractor"></i>
+                <span>AgroBrasil</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="sobre.html" class="active"><i class="fas fa-seedling"></i> Sobre</a></li>
+                <li><a href="index.html#especialidades"><i class="fas fa-chart-line"></i> Especialidades</a></li>
+                <li><a href="index.html#galeria"><i class="fas fa-camera"></i> Galeria</a></li>
+                <li><a href="index.html#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-/* Variáveis */
-:root {
-    --verde-profundo: #1f4f1a;
-    --verde-destaque: #2d6a2a;
-    --verde-claro: #6a9c4b;
-    --verde-agri: #8eb057;
-    --bege-claro: #fef9e6;
-    --cinza-suave: #f4f7f2;
-    --sombra-leve: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
-    --sombra-hover: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
-}
+    <div class="container">
+        <section class="section" style="margin-top: 40px;">
+            <h1 style="font-size: 2.5rem; border-left: 6px solid var(--verde-agri); padding-left: 20px;">🌾 A História da Agricultura no Brasil</h1>
+            <div class="history-content">
+                <p><strong>Desde os tempos coloniais até os dias atuais, a agricultura sempre foi a espinha dorsal da economia brasileira.</strong> O que começou com o cultivo da cana-de-açúcar no litoral nordestino expandiu-se para o café no Sudeste, depois para a soja, o milho e a pecuária que hoje dominam o Centro-Oeste e o Matopiba.</p>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+                <img src="https://images.unsplash.com/photo-1523348837708-15a4ad34b42b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Plantação histórica no Brasil" loading="lazy">
 
-/* Navbar */
-.navbar {
-    background: var(--verde-profundo);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 14px 24px;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-.logo i {
-    font-size: 2rem;
-    color: #ffd966;
-}
-.nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #f0f7e6;
-    font-weight: 500;
-    transition: 0.2s;
-    font-size: 1rem;
-    letter-spacing: 0.3px;
-}
-.nav-links a:hover {
-    color: #ffde9c;
-    transform: translateY(-1px);
-}
-@media (max-width: 700px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .nav-links {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
+                <h2 style="margin-top: 1rem;">Do Café à Soja: Evolução Tecnológica</h2>
+                <p>No século XX, o Brasil passou por uma verdadeira revolução verde. Com a criação da Embrapa na década de 1970, o Cerrado, antes considerado improdutivo, tornou-se um dos maiores celeiros do mundo. A adaptação de solos ácidos, o desenvolvimento de variedades resistentes e a mecanização do campo impulsionaram a produtividade de forma exponencial.</p>
 
-/* Hero */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(30, 40, 10, 0.7)), 
-                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center 35%;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-.hero-content {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.5);
-    line-height: 1.2;
-}
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 32px;
-    font-weight: 400;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-.btn-hero {
-    background-color: #ffb347;
-    color: #2a4b1e;
-    padding: 14px 34px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-}
-.btn-hero:hover {
-    background-color: #ff9f1a;
-    transform: scale(1.02);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.25);
-}
+                <div class="highlight">
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #2d6a2a;"></i>
+                    <p style="margin-top: 12px;"><strong>Hoje, o Brasil é líder mundial na produção de soja, café, açúcar, suco de laranja e carne bovina.</strong> Mais de 30% do PIB nacional está ligado ao agronegócio, que emprega cerca de 15 milhões de brasileiros direta e indiretamente.</p>
+                </div>
 
-/* Seções */
-.section {
-    background: white;
-    border-radius: 28px;
-    padding: 40px 36px;
-    margin: 48px 0;
-    box-shadow: var(--sombra-leve);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.section:hover {
-    box-shadow: var(--sombra-hover);
-}
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: var(--verde-destaque);
-    border-left: 6px solid var(--verde-agri);
-    padding-left: 20px;
-    margin-bottom: 28px;
-    font-weight: 700;
-}
-.sub {
-    color: #4a6741;
-    margin-bottom: 32px;
-    font-size: 1.1rem;
-}
+                <h2>Inovação e Sustentabilidade</h2>
+                <p>A agricultura moderna brasileira combina tecnologia de ponta com práticas sustentáveis. O plantio direto, a integração lavoura-pecuária-floresta (ILPF) e o uso de bioinsumos reduzem a pegada ambiental e aumentam a eficiência. O país também é referência em energia renovável, com o etanol de cana-de-açúcar e a biomassa.</p>
 
-/* Cards especialidades */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-.card {
-    background: #fefef9;
-    border-radius: 20px;
-    padding: 28px 20px;
-    transition: all 0.3s;
-    border: 1px solid #e2eed9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.02);
-}
-.card:hover {
-    transform: translateY(-8px);
-    border-color: var(--verde-agri);
-    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
-}
-.card i {
-    font-size: 2.5rem;
-    color: var(--verde-destaque);
-    margin-bottom: 20px;
-}
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    color: #2c5e24;
-}
-.card p {
-    color: #3a4635;
-}
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Agricultura tecnológica" loading="lazy">
 
-/* Estatísticas */
-.stats-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    text-align: center;
-    margin: 20px 0 10px;
-}
-.stat-item {
-    flex: 1;
-    background: #eef5e8;
-    border-radius: 28px;
-    padding: 28px 12px;
-    transition: 0.2s;
-}
-.stat-number {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--verde-profundo);
-    line-height: 1;
-}
-.stat-label {
-    font-weight: 600;
-    color: #2f5230;
-    font-size: 1.1rem;
-}
+                <h2>O Futuro do Agro</h2>
+                <p>Com a crescente demanda por alimentos no mundo, o agricultor brasileiro tem um papel essencial. A agricultura de precisão, os drones, a inteligência artificial e a rastreabilidade digital estão transformando o campo. O objetivo é produzir mais com menos recursos, garantindo segurança alimentar e preservação ambiental.</p>
 
-/* Galeria */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 30px;
-}
-.gallery-item {
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-.gallery-item img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s;
-}
-.gallery-item:hover img {
-    transform: scale(1.03);
-}
-.gallery-caption {
-    background: white;
-    padding: 12px;
-    text-align: center;
-    font-weight: 600;
-    color: #2e6b2a;
-}
+                <p>Ser agricultor no século XXI é ser um gestor de alta tecnologia, um guardião do meio ambiente e um provedor de vida. A história do agro é a história do Brasil, e ela continua sendo escrita a cada safra, com suor, inovação e amor pela terra.</p>
 
-/* Depoimentos */
-.testimonial-card {
-    background: #fafef5;
-    border-radius: 28px;
-    padding: 28px;
-    margin: 20px 0;
-    border-left: 6px solid var(--verde-agri);
-}
-.testimonial-text {
-    font-size: 1.1rem;
-    color: #2d3a24;
-    font-weight: 500;
-}
-.testimonial-author {
-    margin-top: 18px;
-    font-weight: 700;
-    color: var(--verde-profundo);
-}
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar para a página inicial</a>
+            </div>
+        </section>
+    </div>
 
-/* Contato */
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-.contact-info {
-    background: #f4f8ef;
-    padding: 24px;
-    border-radius: 28px;
-}
-.contact-info p {
-    margin: 16px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #cad6bf;
-    border-radius: 40px;
-    margin-bottom: 18px;
-    font-family: inherit;
-    background: white;
-}
-.contact-form textarea {
-    border-radius: 24px;
-    resize: vertical;
-}
-.btn-enviar {
-    background: var(--verde-destaque);
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 40px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.btn-enviar:hover {
-    background: #164b12;
-}
+    <footer>
+        <p><i class="fas fa-tractor"></i> © 2026 - Profissão Agricultor | Conheça nossa trajetória e celebre o agro brasileiro 🌿</p>
+    </footer>
 
-/* Rodapé */
-footer {
-    background: #1b3b16;
-    color: #ddecd4;
-    text-align: center;
-    padding: 32px 20px;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-footer i {
-    color: #ffcd7e;
-}
-
-/* Botão WhatsApp */
-.btn-whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25D366;
-    color: white;
-    border-radius: 50px;
-    padding: 14px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    z-index: 99;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Inter', sans-serif;
-}
-.btn-whatsapp i {
-    font-size: 1.8rem;
-}
-@media (max-width: 550px) {
-    .btn-whatsapp span {
-        display: none;
-    }
-    .btn-whatsapp {
-        padding: 12px;
-        border-radius: 50%;
-        width: 56px;
-        height: 56px;
-        justify-content: center;
-    }
-}
-
-/* Responsividade geral */
-@media (max-width: 800px) {
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .section {
-        padding: 30px 20px;
-    }
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .stats-grid {
-        flex-direction: column;
-    }
-}
-
-/* Scroll suave para âncoras */
-html {
-    scroll-padding-top: 80px;
-}
+    <!-- Botão WhatsApp flutuante também na página sobre -->
+    <a href="https://wa.me/5514988887766?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20história%20da%20agricultura." class="btn-whatsapp" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale conosco</span>
+    </a>
+</body>
+</html>
