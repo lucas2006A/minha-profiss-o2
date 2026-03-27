@@ -1,150 +1,199 @@
 <!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultura: O Coração do Brasil</title>
-    <style>
-        /* Estilos Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7f2;
-        }
-
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-
-        /* Seções */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #2d5a27;
-            border-bottom: 2px solid #8eb057;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Grid de Serviços/Cultivos */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #f9fbf8;
-            padding: 20px;
-            border-left: 5px solid #2d5a27;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #2d5a27;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>🌾 Agricultura: O Coração do Brasil | Orgulho do Campo</title>
+    <meta name="description" content="Portal dedicado à profissão de agricultor, destacando práticas sustentáveis, tecnologia no campo e a importância do agro para o Brasil.">
+    <meta name="author" content="Agricultor Brasil">
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonte Google: Inter + Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Orgulho de ser Agricultor</h1>
-        <p>Cultivando o futuro com dedicação, tecnologia e respeito à terra.</p>
-    </header>
+    <!-- Navegação fixa -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tractor"></i>
+                <span>AgroBrasil</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#sobre"><i class="fas fa-seedling"></i> Sobre</a></li>
+                <li><a href="#especialidades"><i class="fas fa-chart-line"></i> Especialidades</a></li>
+                <li><a href="#galeria"><i class="fas fa-camera"></i> Galeria</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero principal -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>🌱 Orgulho de ser Agricultor</h1>
+            <p>Cultivando o futuro com dedicação, tecnologia e respeito à terra. O agro é a força que move o Brasil.</p>
+            <a href="#sobre" class="btn-hero"><i class="fas fa-hand-peace"></i> Conheça nossa história</a>
+        </div>
+    </section>
 
     <div class="container">
-        
-        <section class="section">
-            <h2>Sobre a Profissão</h2>
-            <p>Ser agricultor é mais do que um trabalho; é uma missão. É entender os ciclos da natureza, lidar com o solo e garantir que o alimento chegue à mesa de milhões de pessoas. Do plantio à colheita, cada etapa exige paciência e conhecimento técnico.</p>
+        <!-- Seção SOBRE A PROFISSÃO -->
+        <section id="sobre" class="section">
+            <h2><i class="fas fa-leaf"></i> Sobre a Profissão</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 16px;">Ser agricultor é mais do que um trabalho; é uma missão. É entender os ciclos da natureza, lidar com o solo e garantir que o alimento chegue à mesa de milhões de pessoas. Do plantio à colheita, cada etapa exige paciência, conhecimento técnico e paixão pelo campo.</p>
+            <p>O Brasil é um dos celeiros do mundo, e por trás de cada safra recorde existe dedicação e inovação. A agricultura brasileira une tradição e tecnologia, alimentando o planeta de forma sustentável e gerando oportunidades para o desenvolvimento do país.</p>
+            <div style="background: #eaf5e3; padding: 20px; border-radius: 20px; margin-top: 24px;">
+                <i class="fas fa-quote-left" style="color: #2d6a2a; font-size: 1.8rem; opacity: 0.6;"></i>
+                <p style="font-style: italic; font-weight: 500;">“Sem o agricultor, não há alimento. Sem alimento, não há futuro. Somos a base de tudo.”</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Minhas Especialidades</h2>
-            <div class="grid">
+        <!-- Números do Agro -->
+        <div class="section">
+            <h2><i class="fas fa-chart-simple"></i> O Agro em Números</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number">30%</div><div class="stat-label">do PIB brasileiro</div><small>Agronegócio</small></div>
+                <div class="stat-item"><div class="stat-number">+15 mi</div><div class="stat-label">empregos no campo</div><small>Diretos e indiretos</small></div>
+                <div class="stat-item"><div class="stat-number">1º lugar</div><div class="stat-label">maior produtor de soja, café e açúcar</div><small>Exportação mundial</small></div>
+            </div>
+        </div>
+
+        <!-- Especialidades -->
+        <section id="especialidades" class="section">
+            <h2><i class="fas fa-star-of-life"></i> Minhas Especialidades</h2>
+            <div class="grid-cards">
                 <div class="card">
+                    <i class="fas fa-seedling"></i>
                     <h3>Plantio Sustentável</h3>
-                    <p>Uso de técnicas que preservam os nutrientes do solo e garantem colheitas saudáveis a longo prazo.</p>
+                    <p>Uso de técnicas que preservam os nutrientes do solo, rotação de culturas e adubação verde, garantindo colheitas saudáveis a longo prazo.</p>
                 </div>
                 <div class="card">
+                    <i class="fas fa-tachometer-alt"></i>
                     <h3>Gestão de Cultivos</h3>
-                    <p>Monitoramento constante contra pragas e otimização do uso de recursos hídricos.</p>
+                    <p>Monitoramento constante contra pragas e otimização do uso de recursos hídricos com irrigação eficiente e manejo integrado.</p>
                 </div>
                 <div class="card">
+                    <i class="fas fa-microchip"></i>
                     <h3>Tecnologia no Campo</h3>
-                    <p>Aplicação de maquinário moderno e monitoramento digital para aumentar a produtividade.</p>
+                    <p>Aplicação de maquinário moderno, drones e monitoramento digital para aumentar a produtividade e reduzir impactos.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Comércio Justo</h3>
+                    <p>Valorização do pequeno produtor e parcerias diretas com cooperativas, garantindo preço justo e rastreabilidade.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Contato</h2>
-            <p>Interessado em saber mais sobre os produtos ou trocar experiências sobre o agronegócio? Entre em contato!</p>
-            <p style="margin-top: 15px;"><strong>Email:</strong> contato@meusitio.com.br</p>
-            <p><strong>Localização:</strong> Interior de São Paulo / Brasil</p>
+        <!-- Galeria de imagens do campo -->
+        <section id="galeria" class="section">
+            <h2><i class="fas fa-image"></i> Belezas da Colheita</h2>
+            <p class="sub">Cada fruto carrega o suor e a esperança de quem cultiva a terra com amor.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7e1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Campo de milho no Brasil" loading="lazy">
+                    <div class="gallery-caption">🌽 Milho safra de alta tecnologia</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Soja pronta para colheita" loading="lazy">
+                    <div class="gallery-caption">🌱 Soja brasileira – orgulho nacional</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517957754642-2870518e16f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Café em grãos maduros" loading="lazy">
+                    <div class="gallery-caption">☕ Café arábica – sabor do Brasil</div>
+                </div>
+            </div>
         </section>
 
+        <!-- Depoimentos inspiradores -->
+        <div class="section">
+            <h2><i class="fas fa-comment-dots"></i> Vozes do Campo</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">“Graças à tecnologia e ao manejo sustentável, minha família dobrou a produção de grãos nos últimos 5 anos. O segredo é unir conhecimento e amor pela terra.”</p>
+                <p class="testimonial-author">— João Mendes, produtor de soja, MT</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">“Trabalhar com agricultura familiar é garantir comida saudável na mesa e manter nossa cultura viva. Somos a alma do Brasil.”</p>
+                <p class="testimonial-author">— Maria Aparecida, agricultora orgânica, SP</p>
+            </div>
+        </div>
+
+        <!-- Contato -->
+        <section id="contato" class="section">
+            <h2><i class="fas fa-address-card"></i> Fale com a Gente</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 style="color: #2d5a27; margin-bottom: 18px;">📍 Informações diretas</h3>
+                    <p><i class="fas fa-envelope" style="color:#2d6a2a;"></i> <strong>Email:</strong> contato@meusitio.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Interior de São Paulo / Brasil – Região do Vale do Paranapanema</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>WhatsApp:</strong> (14) 98888-7766</p>
+                    <p><i class="fas fa-clock"></i> Atendimento: Segunda a Sexta, 8h às 18h</p>
+                    <div style="margin-top: 25px;">
+                        <i class="fab fa-instagram fa-2x" style="margin-right: 16px; color: #3e6b35;"></i>
+                        <i class="fab fa-facebook fa-2x" style="margin-right: 16px; color: #3e6b35;"></i>
+                        <i class="fab fa-youtube fa-2x" style="color: #3e6b35;"></i>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px;">📝 Envie sua mensagem</h3>
+                    <form action="#" method="post" id="formContato">
+                        <input type="text" placeholder="Seu nome completo" required>
+                        <input type="email" placeholder="E-mail para contato" required>
+                        <textarea rows="4" placeholder="Dúvidas, parcerias ou sugestões..."></textarea>
+                        <button type="submit" class="btn-enviar"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+                    </form>
+                    <p style="font-size: 0.8rem; margin-top: 12px; color: #4f6945;">*Responderemos em até 24h úteis. Juntos fortalecemos o agro!</p>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Rodapé final -->
     <footer>
-        <p>&copy; 2026 - Profissão Agricultor | Feito com dedicação.</p>
+        <p><i class="fas fa-tractor"></i> © 2026 - Profissão Agricultor | Cultivando sonhos, alimentando o Brasil 🌽</p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">Orgulho de quem planta, colhe e transforma o futuro com as próprias mãos.</p>
     </footer>
 
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5514988887766?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20agricultura%20sustentável." class="btn-whatsapp" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale conosco</span>
+    </a>
+
+    <script>
+        // Intercepta o envio do formulário
+        const form = document.getElementById('formContato');
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('✅ Mensagem enviada com sucesso! Em breve nosso time do agro entrará em contato.');
+                form.reset();
+            });
+        }
+
+        // Scroll suave para os links de navegação
+        document.querySelectorAll('.nav-links a, .btn-hero').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
